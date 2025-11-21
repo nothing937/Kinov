@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { createPageUrl } from './utils.js';
+import { createPageUrl } from '../utils';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Target, TrendingUp, Play, Star, CheckCircle } from 'lucide-react';
 
@@ -8,35 +8,35 @@ export default function Home() {
     const features = [
         {
             icon: Zap,
-            title: 'Lightning Fast',
-            description: 'Experience blazing performance that keeps your audience engaged and coming back for more.'
+            title: 'Professional Car Washing',
+            description: 'Expert hand wash and detailing services using premium products. Your car will shine like new, inside and out.'
         },
         {
             icon: Target,
-            title: 'Precision Targeting',
-            description: 'Reach exactly who you need with intelligent algorithms and data-driven insights.'
+            title: 'Premium Window Film',
+            description: 'High-quality window tinting for UV protection, privacy, and temperature control. Professional installation guaranteed.'
         },
         {
             icon: TrendingUp,
-            title: 'Proven Results',
-            description: 'Join thousands of satisfied clients who have achieved remarkable growth with our solutions.'
+            title: 'Trusted by Thousands',
+            description: 'Join over 10,000 satisfied customers who trust us with their vehicles. Quality service, every time.'
         }
     ];
 
     const stats = [
-        { value: '500K+', label: 'Active Users' },
+        { value: '10K+', label: 'Cars Serviced' },
         { value: '98%', label: 'Satisfaction Rate' },
-        { value: '50M+', label: 'Views Generated' },
-        { value: '24/7', label: 'Support' }
+        { value: '15+', label: 'Years Experience' },
+        { value: '24/7', label: 'Booking Available' }
     ];
 
     const benefits = [
-        'Industry-leading performance and reliability',
-        'Advanced analytics and reporting',
-        'Seamless integration with your workflow',
-        'Dedicated support team',
-        'Scalable solutions for any size business',
-        'Cutting-edge technology stack'
+        'Eco-friendly cleaning products',
+        'Experienced and certified technicians',
+        'Premium quality window film brands',
+        'Lifetime warranty on window film installation',
+        'Free pickup and delivery service',
+        'Competitive pricing and packages'
     ];
 
     return (
@@ -58,21 +58,21 @@ export default function Home() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-violet-200 mb-8">
                             <div className="w-2 h-2 bg-gradient-to-r from-violet-600 to-cyan-500 rounded-full animate-pulse" />
                             <span className="text-sm font-medium bg-gradient-to-r from-violet-600 to-cyan-600 bg-clip-text text-transparent">
-                                Transform Your Vision
+                                Premium Car Care Services
                             </span>
                         </div>
 
                         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
                             <span className="bg-gradient-to-r from-indigo-900 via-violet-700 to-cyan-600 bg-clip-text text-transparent">
-                                Elevate Your
+                                Your Car Deserves
                             </span>
                             <br />
-                            <span className="text-slate-900">Brand Experience</span>
+                            <span className="text-slate-900">The Best Care</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-                            Unlock unlimited potential with cutting-edge solutions designed 
-                            to captivate, engage, and convert your audience.
+                            Professional car washing and premium window film installation services. 
+                            Keep your vehicle looking pristine and protected.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -81,7 +81,7 @@ export default function Home() {
                                 className="group relative px-8 py-4 bg-gradient-to-r from-indigo-900 to-violet-700 text-white rounded-2xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40 hover:scale-105"
                             >
                                 <span className="relative z-10 flex items-center gap-2">
-                                    Get Started Now
+                                    Book Appointment
                                     <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                                 </span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -92,7 +92,7 @@ export default function Home() {
                                 className="group px-8 py-4 bg-white border-2 border-slate-200 text-slate-900 rounded-2xl font-semibold text-lg transition-all duration-300 hover:border-violet-300 hover:shadow-lg flex items-center gap-2"
                             >
                                 <Play className="group-hover:scale-110 transition-transform" size={20} />
-                                Watch Videos
+                                See Our Work
                             </Link>
                         </div>
                     </motion.div>
@@ -132,10 +132,10 @@ export default function Home() {
                         className="text-center mb-20"
                     >
                         <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-900 to-violet-700 bg-clip-text text-transparent">
-                            Why Choose Us
+                            Our Services
                         </h2>
                         <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                            We combine innovation, expertise, and dedication to deliver exceptional results
+                            Premium car care solutions tailored to keep your vehicle in perfect condition
                         </p>
                     </motion.div>
 
@@ -185,17 +185,17 @@ export default function Home() {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-5xl font-bold mb-8">
-                                Everything You Need to Succeed
+                                Why AutoCare Pro?
                             </h2>
                             <p className="text-indigo-200 text-lg leading-relaxed mb-8">
-                                Our comprehensive platform provides all the tools and support 
-                                necessary to achieve your goals and exceed expectations.
+                                We provide comprehensive car care services with attention to detail 
+                                and commitment to excellence. Your satisfaction is our priority.
                             </p>
                             <Link
                                 to={createPageUrl('Contact')}
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-900 rounded-2xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
                             >
-                                Start Your Journey
+                                Book Your Service
                                 <ArrowRight size={20} />
                             </Link>
                         </motion.div>
@@ -244,13 +244,13 @@ export default function Home() {
                             </div>
                             
                             <blockquote className="text-2xl md:text-3xl font-medium text-slate-900 mb-8 leading-relaxed">
-                                "This platform transformed our business completely. The results 
-                                exceeded our wildest expectations and the support team is phenomenal."
+                                "Best car service I've ever had! The window film installation was flawless 
+                                and the wash left my car looking brand new. Highly recommend!"
                             </blockquote>
                             
                             <div>
-                                <div className="font-bold text-lg text-slate-900">Sarah Johnson</div>
-                                <div className="text-slate-600">CEO, Tech Innovations Inc.</div>
+                                <div className="font-bold text-lg text-slate-900">Michael Rodriguez</div>
+                                <div className="text-slate-600">Tesla Model S Owner</div>
                             </div>
                         </div>
                     </motion.div>
@@ -267,17 +267,17 @@ export default function Home() {
                     >
                         <h2 className="text-5xl md:text-6xl font-bold mb-8">
                             <span className="bg-gradient-to-r from-indigo-900 to-violet-700 bg-clip-text text-transparent">
-                                Ready to Get Started?
+                                Ready for Premium Care?
                             </span>
                         </h2>
                         <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-                            Join thousands of satisfied clients and experience the difference today
+                            Book your appointment today and give your car the treatment it deserves
                         </p>
                         <Link
                             to={createPageUrl('Contact')}
                             className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-indigo-900 to-violet-700 text-white rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-violet-500/40 hover:scale-105 transition-all duration-300"
                         >
-                            Contact Us Now
+                            Book Appointment
                             <ArrowRight size={22} />
                         </Link>
                     </motion.div>
