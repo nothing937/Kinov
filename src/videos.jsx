@@ -8,49 +8,49 @@ export default function Videos() {
     const videos = [
         {
             id: 1,
-            title: 'Product Showcase',
-            description: 'Discover how our innovative solutions can transform your business operations',
-            thumbnail: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
+            title: 'Premium Car Wash Process',
+            description: 'Watch our meticulous hand wash and detailing process from start to finish',
+            thumbnail: 'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=80',
             duration: '3:45',
             views: '125K'
         },
         {
             id: 2,
-            title: 'Client Success Stories',
-            description: 'Real testimonials from businesses that achieved remarkable growth with us',
-            thumbnail: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
+            title: 'Window Film Installation',
+            description: 'Professional tinting installation on a luxury sedan - step by step',
+            thumbnail: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80',
             duration: '5:20',
             views: '89K'
         },
         {
             id: 3,
-            title: 'Behind the Scenes',
-            description: 'Meet our team and see the passion that drives our innovation',
-            thumbnail: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
+            title: 'Before & After Transformations',
+            description: 'Amazing results from our car washing and detailing services',
+            thumbnail: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80',
             duration: '4:15',
             views: '156K'
         },
         {
             id: 4,
-            title: 'Platform Tutorial',
-            description: 'Learn how to maximize your results with our powerful features',
-            thumbnail: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80',
+            title: 'Window Film Benefits',
+            description: 'Learn about UV protection, heat reduction, and privacy benefits of quality tinting',
+            thumbnail: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80',
             duration: '6:30',
             views: '203K'
         },
         {
             id: 5,
-            title: 'Industry Insights',
-            description: 'Expert analysis and trends shaping the future of digital marketing',
-            thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+            title: 'Interior Deep Cleaning',
+            description: 'Complete interior detailing service transforming a used vehicle',
+            thumbnail: 'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80',
             duration: '8:12',
             views: '94K'
         },
         {
             id: 6,
-            title: 'Innovation Spotlight',
-            description: 'Explore cutting-edge technologies powering our platform',
-            thumbnail: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80',
+            title: 'Customer Testimonials',
+            description: 'Hear from our satisfied customers about their AutoCare Pro experience',
+            thumbnail: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80',
             duration: '4:50',
             views: '112K'
         }
@@ -72,10 +72,10 @@ export default function Videos() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="text-6xl md:text-7xl font-bold mb-6">
-                            Video Gallery
+                            Our Work in Action
                         </h1>
                         <p className="text-xl md:text-2xl text-indigo-200 max-w-3xl mx-auto leading-relaxed">
-                            Explore our collection of compelling stories, insights, and demonstrations
+                            Watch professional car washing and window film installation transformations
                         </p>
                     </motion.div>
                 </div>
@@ -149,10 +149,10 @@ export default function Videos() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-900 to-violet-700 bg-clip-text text-transparent">
-                            Featured Content
+                            Featured Video
                         </h2>
                         <p className="text-lg text-slate-600">
-                            Our most popular video this month
+                            See our premium car wash service in action
                         </p>
                     </motion.div>
 
