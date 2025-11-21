@@ -7,7 +7,10 @@ import Videos from './videos';
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Route>
     </Routes>
-  )
+  );
 }
