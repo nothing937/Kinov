@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from './Home';
-import Layout from './layout';
-import Videos from './videos';
+import Home from './Home.jsx';
+import Layout from './layout.jsx';
+import Videos from './videos.jsx';
 
 export default function App() {
   return (
