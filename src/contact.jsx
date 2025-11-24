@@ -1,38 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: ''
-    });
-    const [submitted, setSubmitted] = useState(false);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you would typically send the form data to your backend
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
-        setTimeout(() => {
-            setSubmitted(false);
-            setFormData({ name: '', email: '', phone: '', company: '', message: '' });
-        }, 3000);
-    };
-
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
     const contactInfo = [
         {
             icon: Mail,
@@ -79,129 +49,10 @@ export default function Contact() {
                 </div>
             </section>
 
-            {/* Contact Form & Info Section */}
+            {/* Contact Information Section */}
             <section className="py-24 px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        {/* Contact Form */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl shadow-slate-200/50 border border-slate-100">
-                                <h2 className="text-3xl font-bold mb-3 text-slate-900">
-                                    Book an Appointment
-                                </h2>
-                                <p className="text-slate-600 mb-8">
-                                    Fill out the form below and we'll confirm your booking within 2 hours
-                                </p>
-
-                                {submitted ? (
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.9 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        className="flex flex-col items-center justify-center py-12 text-center"
-                                    >
-                                        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-6">
-                                            <CheckCircle className="text-white" size={40} />
-                                        </div>
-                                        <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                                            Booking Received!
-                                        </h3>
-                                        <p className="text-slate-600">
-                                            We'll confirm your appointment within 2 hours.
-                                        </p>
-                                    </motion.div>
-                                ) : (
-                                    <form onSubmit={handleSubmit} className="space-y-6">
-                                        <div>
-                                            <label className="block text-sm font-semibold text-slate-700 mb-2">
-                                                Your Name *
-                                            </label>
-                                            <Input
-                                                name="name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                required
-                                                className="h-12 rounded-xl border-slate-200 focus:border-violet-500 focus:ring-violet-500"
-                                                placeholder="John Doe"
-                                            />
-                                        </div>
-
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div>
-                                                <label className="block text-sm font-semibold text-slate-700 mb-2">
-                                                    Email Address *
-                                                </label>
-                                                <Input
-                                                    name="email"
-                                                    type="email"
-                                                    value={formData.email}
-                                                    onChange={handleChange}
-                                                    required
-                                                    className="h-12 rounded-xl border-slate-200 focus:border-violet-500 focus:ring-violet-500"
-                                                    placeholder="john@example.com"
-                                                />
-                                            </div>
-
-                                            <div>
-                                                <label className="block text-sm font-semibold text-slate-700 mb-2">
-                                                    Phone Number
-                                                </label>
-                                                <Input
-                                                    name="phone"
-                                                    type="tel"
-                                                    value={formData.phone}
-                                                    onChange={handleChange}
-                                                    className="h-12 rounded-xl border-slate-200 focus:border-violet-500 focus:ring-violet-500"
-                                                    placeholder="+1 (555) 000-0000"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-sm font-semibold text-slate-700 mb-2">
-                                                Vehicle Make & Model
-                                            </label>
-                                            <Input
-                                                name="company"
-                                                value={formData.company}
-                                                onChange={handleChange}
-                                                className="h-12 rounded-xl border-slate-200 focus:border-violet-500 focus:ring-violet-500"
-                                                placeholder="e.g., Toyota Camry 2022"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <label className="block text-sm font-semibold text-slate-700 mb-2">
-                                                Service Required & Preferred Date *
-                                            </label>
-                                            <Textarea
-                                                name="message"
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                                required
-                                                rows={6}
-                                                className="rounded-xl border-slate-200 focus:border-violet-500 focus:ring-violet-500 resize-none"
-                                                placeholder="e.g., Full car wash and window film installation, preferred date: Next Saturday"
-                                            />
-                                        </div>
-
-                                        <Button
-                                            type="submit"
-                                            className="w-full h-14 bg-gradient-to-r from-indigo-900 to-violet-700 hover:from-indigo-800 hover:to-violet-600 text-white rounded-xl font-semibold text-lg shadow-lg shadow-violet-500/30 hover:shadow-xl hover:shadow-violet-500/40 transition-all duration-300"
-                                        >
-                                            <Send className="mr-2" size={20} />
-                                            Book Appointment
-                                        </Button>
-                                    </form>
-                                )}
-                            </div>
-                        </motion.div>
-
-                        {/* Contact Information */}
-                        <motion.div
+                <div className="max-w-5xl mx-auto">
+                    <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -271,8 +122,7 @@ export default function Contact() {
                                     <p className="font-medium">Map Location</p>
                                 </div>
                             </div>
-                        </motion.div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
